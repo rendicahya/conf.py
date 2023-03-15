@@ -1,17 +1,17 @@
-# config.py
+# Convigure
 
 Easy configuration for Python with dot notation. Currently supports JSON and TOML.
 
 ## Installation
 ```
-pip install config.py
+pip install conviguration
 ```
 
 ## Usage
 ```python
-from config_py import Config
+from conviguration import Conf
 
-toml = Config.load_toml("config.toml")
+toml = Conf.load_toml("conf.toml")
 
 print(toml.title)
 print(toml.images[0])

@@ -11,7 +11,7 @@ setuptools.setup(
     description="Easy configuration for Python with dot notation.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/rendicahya/config.py",
+    url="https://github.com/rendicahya/convigure",
     packages=setuptools.find_packages(),
     install_requires=["toml"],
     classifiers=[
