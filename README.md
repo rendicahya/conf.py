@@ -1,17 +1,17 @@
-# conf.py
+# config.py
 
 Easy configuration for Python with dot notation. Currently supports JSON and TOML.
 
 ## Installation
 ```
-pip install conf.py
+pip install config.py
 ```
 
 ## Usage
 ```python
-from conf_py import Conf
+from config_py import Config
 
-toml = Conf.load_toml("conf.toml")
+toml = Config.load_toml("config.toml")
 
 print(toml.title)
 print(toml.images[0])

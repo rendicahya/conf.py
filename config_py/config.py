@@ -8,13 +8,13 @@ class DotDict(dict):
     __delattr__ = dict.__delitem__
 
 
-class Conf(object):
+class Config(object):
     @staticmethod
     def parse(data):
         if type(data) is dict:
-            return Conf.parse_dict(data)
+            return Config.parse_dict(data)
         elif type(data) is list:
-            return Conf.parse_list(data)
+            return Config.parse_list(data)
         else:
             return data
 
@@ -23,24 +23,24 @@ class Conf(object):
         conf = DotDict()
 
         for key, value in data.items():
-            conf[key] = Conf.parse(value)
+            conf[key] = Config.parse(value)
 
         return conf
 
     @staticmethod
     def parse_list(data: list):
-        return [Conf.parse(item) for item in data]
+        return [Config.parse(item) for item in data]
 
     @staticmethod
     def load_json(path: str) -> DotDict:
         with open(path, "r") as f:
-            result = Conf.parse(json.loads(f.read()))
+            result = Config.parse(json.loads(f.read()))
 
         return result
 
     @staticmethod
     def load_toml(path: str):
         with open(path, "r") as f:
-            result = Conf.parse(toml.load(f))
+            result = Config.parse(toml.load(f))
 
         return result
