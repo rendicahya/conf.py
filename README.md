@@ -1,5 +1,18 @@
-# Example Package
+# conf.py
 
-This is a simple example package. You can use
-[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
-to write your content.
+Easy configuration for Python with dot notation. Currently supports JSON and TOML.
+
+## Installation
+```
+pip install conf.py
+```
+
+## Usage
+```python
+from conf_py import Conf
+
+toml = Conf.load_toml("conf.toml")
+
+print(toml.title)
+print(toml.images[0])
+```
