@@ -4,12 +4,12 @@ Easy configuration for Python with dot notation. Currently supports JSON and TOM
 
 ## Installation
 ```
-pip install conviguration
+pip install convigure
 ```
 
 ## Usage
 ```python
-from conviguration import Conf
+from convigure import Conf
 
 toml = Conf.load_toml("conf.toml")
 
