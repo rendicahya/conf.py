@@ -20,12 +20,12 @@ class Config(object):
 
     @staticmethod
     def parse_dict(data: dict) -> DotDict:
-        conf = DotDict()
+        config = DotDict()
 
         for key, value in data.items():
-            conf[key] = Config.parse(value)
+            config[key] = Config.parse(value)
 
-        return conf
+        return config
 
     @staticmethod
     def parse_list(data: list):
