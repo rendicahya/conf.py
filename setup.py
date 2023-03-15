@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="config.py",
+    name="convigure",
     version="0.1.0",
     author="Randy Cahya Wihandika",
     author_email="rendicahya@gmail.com",

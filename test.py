@@ -1,6 +1,6 @@
-from config_py import Config
+from convigure import Conf
 
-toml = Config.load_toml("config.toml")
+toml = Conf.load_toml("conf.toml")
 
 print(toml.title)
 print(toml.images[0])
