@@ -13,8 +13,6 @@ class Conf(object):
     def parse(data):
         if type(data) is dict:
             return Conf.parse_dict(data)
-        elif type(data) is list:
-            return Conf.parse_list(data)
         else:
             return data
 
@@ -26,10 +24,6 @@ class Conf(object):
             config[key] = Conf.parse(value)
 
         return config
-
-    @staticmethod
-    def parse_list(data: list):
-        return [Conf.parse(item) for item in data]
 
     @staticmethod
     def load_json(path: str) -> DotDict:

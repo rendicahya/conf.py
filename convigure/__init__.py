@@ -1,1 +1,1 @@
-from convigure.conf import Conf
+from convigure.convigure import Conf
