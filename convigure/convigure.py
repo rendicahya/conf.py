@@ -1,5 +1,6 @@
 import json
 import toml
+import yaml
 
 
 class DotDict(dict):
@@ -28,13 +29,20 @@ class Conf(object):
     @staticmethod
     def load_json(path: str) -> DotDict:
         with open(path, "r") as f:
-            result = Conf.parse(json.loads(f.read()))
+            conf = Conf.parse(json.loads(f.read()))
 
-        return result
+        return conf
+
+    @staticmethod
+    def load_yaml(path: str) -> DotDict:
+        with open(path, "r") as f:
+            conf = Conf.parse(yaml.load(f.read(), Loader=yaml.CLoader))
+
+        return conf
 
     @staticmethod
     def load_toml(path: str):
         with open(path, "r") as f:
-            result = Conf.parse(toml.load(f))
+            conf = Conf.parse(toml.load(f))
 
-        return result
+        return conf
